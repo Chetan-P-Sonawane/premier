@@ -154,6 +154,24 @@ html, body{
     animation-timing-function: linear;
 }
 
+@keyframes animate {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(calc(-100% - 4px));
+    }
+
+    /* during animation when the animation happens once and then
+    2nd container comes after the 1st the animation gets
+    stuck and then plays again this is because there is a 4px 
+    space inbetween the containers due to the whitespace nowrap
+    to resolve this issue we need to use -4px while doing
+    translateX in animation */
+
+}
+
 #scroll img{
     height: 71%;
     width:11%;
@@ -165,7 +183,7 @@ html, body{
 
 #alphabets{
     width:100%;
-    height:12%;
+    height:11%;
     display:flex;
     align-items: center;
     justify-content: center;
@@ -209,13 +227,132 @@ html, body{
 
 }
 
+#page2{
+    min-height:100%;
+    width:100%;
+}
 
-@keyframes animate {
+#page2 #page2-container{
+    height:100%;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3vw 6vw 1.7vw 6vw;
+}
+
+#page2-p1{
+    height:90vh;
+    width:55%;
+    background: url(https://images.unsplash.com/photo-1601762603339-fd61e28b698a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size:cover;
+    background-position: 0% 10%;
+}
+
+#page2-p2 {
+    height: 90vh;
+    width: 40.5%;
+}
+
+#page2-p2 img{
+    height:71%;
+    width:100%;
+    object-fit: cover;
+    object-position: center 25%;
+}
+
+#page2-p2 #text{
+    display:flex;
+    justify-content:space-between;
+    width: 100%;
+    padding:1vw 0;
+}
+
+#page2-p2 #text h3{
+    font-size: 1.9vw;
+    width:40%;
+    font-weight: 600;
+}
+
+#page2-p2 #text h5 {
+    width: 47%;
+    font-weight:500;
+    font-size:1.2vw;
+
+}
+
+#page2 #img-name{
+    width:100%;
+    height:14%;
+    padding: 0vw 6vw;
+}
+
+#page2 #img-name h3 {
+   font-size: 3vw;
+   font-weight:600;
+   font-family:monument;
+   text-transform:uppercase;
+}
+
+
+#page3{
+    width:100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    padding: 3vw 6vw;
+}
+
+#page3 #page3-p1{
+    height: 100%;
+    width: 50%;
+    position: relative;
+}
+
+#page3 #page3-p1 #circle{
+    height: 50%;
+    width:50%;
+    /* margin: 6vw 0; */
+    margin: 6vw 11vw;
+    /* background-color: aqua; */
+    animation-name: rotate;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+} 
+
+@keyframes rotate {
     from{
-        transform: translateX(0%);
+        transform: translateX(0) translateY(0) rotate(0)
     }
     to{
-        transform: translateX(-100%);
-    }
+        transform:translateX(0) translateY(0) rotate(360deg) 
+       }
     
 }
+
+#page3 #page3-p1 #barrow {
+    position:absolute;
+    top:34%;
+    left:44%;
+}
+
+
+#page3 #page3-p1 h3 {
+    width: 100%;
+    padding: 0 8vw;
+    font-size: 1.6vw;
+    font-weight: 600;
+}
+
+#page3 #page3-p2{
+    height:100%;
+    width:50%;
+    background: url(https://images.unsplash.com/photo-1622396636133-ba43f812bc35?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) ;
+    background-size:cover;
+}
+
+
+
+
