@@ -8,6 +8,7 @@
 html, body{
     height:100%;
     width:100%;
+    background-color: #F8F8F8;
 }
 
 #main{
@@ -137,7 +138,7 @@ html, body{
 }
 
 #scroll{
-    height:40%;
+    height:40vh;
     width: 100%;
     position:relative;
     white-space: nowrap;
@@ -751,3 +752,137 @@ html, body{
     font-weight:500;
     width:76%;
 }
+
+
+@media (max-width: 600px) {
+
+#nav {
+        height: 60px;
+        padding: 0 4.5vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #nav h1 {
+        width: 80%;
+        height: 100%;
+        font-size: 6vw;
+        border-right: 2px solid #000;
+    }
+
+    #nav h2 {
+        display: none;
+    }
+
+        #nav h2:nth-last-of-type(1) {
+            width: 10%;
+            display:contents;
+        }
+
+     #nav h2 i {
+         font-size: 22px;
+         font-weight: 500;
+         color: #000;
+     }
+
+
+    #center {
+             height: 40%;
+             padding: 4.5vw;
+         }
+
+         #overlay {
+             height: 50%;
+         }
+
+         #overlay-1 h1 {
+             font-size: 4vw;
+         }
+    
+         #overlay-1 h2 {
+             font-size: 2.8vw;
+         }
+    
+         #overlay-2 h2 {
+             font-size: 2.5vw;
+         }
+    
+         #overlay-2 img {
+             height: 6vw;
+             width: 8vw;
+         }
+
+
+      #scroll {
+          height: 20vh;
+          width: 100%;
+      }
+
+      #container {
+          height: 100%;
+          width: 190%;
+      }
+
+      #scroll img {
+          height: 61%;
+          width: 13%;
+          margin: 3vw 3.1vw;
+      }
+      
+      /* recheck ------- */
+
+          #alphabets {
+              width: 100%;
+              height: 8%;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              font-style: italic;
+              border-top: 2px solid #000;
+              border-bottom: 2px solid #000;
+              padding: 1vw 6vw;
+              gap: 1vw;
+              
+          }
+    
+          #alphabets h2 {
+              font-size: 1.5vw;
+              font-weight: 500;
+              letter-spacing: 0.3vw;
+              text-transform: uppercase;
+              border-bottom: 3px solid #000;
+              margin-right: 2vw;
+          }
+    
+          #alpha {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 0.65vw;
+              width: 100%;
+              height: 100%;
+             /* overflow-x:scroll; */
+             
+          }
+    
+          #alpha h3 {
+              font-size: 1.2vw;
+              font-weight: 500;
+              padding: 0.38vw 0.68vw;
+              margin: 1px;
+              border-radius: 50%;
+              border: 1px solid #00000000;
+              transition: all 0.2s ease;
+    
+              &:hover {
+                  border: 1px solid #000;
+              }
+    
+          }
+
+         /* ------- recheck */
+
+}
+
+
