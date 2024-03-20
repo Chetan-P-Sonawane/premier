@@ -836,7 +836,7 @@ html, body{
 
       #container {
           height: 100%;
-          width: 196%;
+          width: 210%;
       }
 
       #scroll img {
@@ -945,9 +945,9 @@ html, body{
                     margin: 5vw 0vw;
                 }
                 #page3 #page3-p1 #barrow {
-                    top: 32%;
-                    left: 34%;
-                    width: 50px;
+                    top: 35%;
+                    left: 40%;
+                    width: 30px;
                 }
                 #page3 #page3-p1 h3 {
                     width: 100%;
